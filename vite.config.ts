@@ -16,11 +16,8 @@ export default defineConfig({
                 bunny('Instrument Sans', {
                     weights: [400, 500, 600],
                 }),
-                bunny('Space Grotesk', {
-                    weights: [400, 500, 600, 700],
-                }),
-                bunny('JetBrains Mono', {
-                    weights: [400, 500],
+                bunny('Inter', {
+                    weights: [400, 500, 600],
                 }),
             ],
         }),
