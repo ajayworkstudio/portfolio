@@ -13,6 +13,16 @@
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
         'Noto Color Emoji';
 
+    --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+    /* Palet halaman portfolio */
+    --color-paper: #f3f1ea;
+    --color-ink: #121212;
+    --color-volt: #d7ff3a;
+
+    --animate-marquee: marquee 40s linear infinite;
+
     --radius-lg: var(--radius);
     --radius-md: calc(var(--radius) - 2px);
     --radius-sm: calc(var(--radius) - 4px);
@@ -139,5 +149,14 @@
 
     body {
         @apply bg-background text-foreground;
+    }
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
     }
 }
