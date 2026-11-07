@@ -8,11 +8,15 @@ import SettingsLayout from '@/layouts/settings/layout';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
+// Halaman publik: dibuka tamu (tanpa login), jadi tidak boleh memakai AppLayout
+// yang membaca data user dari sidebar. Tambahkan nama halaman publik baru di sini.
+const publicPages = ['welcome', 'portfolio'];
+
 void createInertiaApp({
     title: (title) => (title ? `${title} - ${appName}` : appName),
     layout: (name) => {
         switch (true) {
-            case name === 'welcome':
+            case publicPages.includes(name):
                 return null;
             case name.startsWith('auth/'):
                 return AuthLayout;
